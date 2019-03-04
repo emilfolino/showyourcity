@@ -1,0 +1,30 @@
+{
+  "name": "showyourcity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text --reporter=clover mocha \"./v*/test/*.js\" --timeout 10000",
+    "posttest": "npm run eslint",
+    "start": "node app.js",
+    "clean": "rm -rf node_modules package-lock.json",
+    "eslint": "eslint ."
+  },
+  "keywords": [],
+  "author": "Emil Folino",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "eslint": "^5.15.0",
+    "eslint-plugin-react": "^7.12.4",
+    "javascript-style-guide": "^0.9.10",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  }
+}
