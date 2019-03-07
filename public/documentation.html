@@ -17,6 +17,23 @@
     <header>
         <h1>Show Your City API Documentation</h1>
     </header>
+
+    <section id="apikeys">
+    <h2>API keys</h2>
+    <p><a href="/auth/api_key">Request a personal API key.</a></p>
+
+    <p>An API key is required for all requests.</p>
+
+    <p>If an API key is not provided the following error is given:</p>
+    <pre class="lager">{
+        "errors": {
+        "status": 401,
+        "source": "/products",
+        "title": "Valid API key",
+        "detail": "No valid API key provided."
+    }
+}</pre>
+    </section>
 </main>
 
 <footer class="footer">

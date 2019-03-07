@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text --reporter=clover mocha \"./v*/test/*.js\" --timeout 10000",
+    "pretest": "$(db/reset_test_db.bash)",
+    "test": "nyc --reporter=html --reporter=text --reporter=clover mocha --timeout 10000",
     "posttest": "npm run eslint",
     "start": "node app.js",
     "clean": "rm -rf node_modules package-lock.json",
@@ -20,11 +21,18 @@
     "eslint-plugin-react": "^7.12.4",
     "javascript-style-guide": "^0.9.10",
     "mocha": "^6.0.2",
+    "node-html-parser": "^1.1.12",
     "nyc": "^13.3.0"
   },
   "dependencies": {
+    "bcrypt": "^3.0.4",
     "cors": "^2.8.5",
+    "ejs": "^2.6.1",
+    "email-validator": "^2.0.4",
     "express": "^4.16.4",
-    "morgan": "^1.9.1"
+    "hat": "0.0.3",
+    "jsonwebtoken": "^8.5.0",
+    "morgan": "^1.9.1",
+    "sqlite3": "^4.0.6"
   }
 }
